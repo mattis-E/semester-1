@@ -17,7 +17,7 @@ You can complete this task on the worksheet pdf if you prefer.
 |     cd -                    | Return to previously-occupied directory, even through multiple levels |
 |     mkdir directory_name    | Create a directory with the given directory name |
 |     touch filename          | Create a file with the given name, OR updates its creation time to the current time if the file already exists |
-|     git status              | Shows the history of git commits in a workspace, who committed them, commit messages, etc |
+|     git status              | Shows the state of the staging area in the current repository (which files have ben modified). |
 |     git add -A              | Adds all the files in a directory (and its subdirectories, recursively) to the staging area, so that they can be committed |
 |     git commit -m ""        | Commits all the changes made to files in the staging area under a single message to summarise the changes. They can be rolled back to this point, for example |
 |     git push                | Pushes/communicates the changes made to files (or new files) which have been committed to a remote repository, e.g. gitlab or GitHub |
