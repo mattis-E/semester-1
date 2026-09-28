@@ -1,0 +1,12 @@
+# 2 advantages of using VC when writing software:
+### Individual's Perspective:
+1. VC enables rolling back the codebase to previous stable releases, which lets the programmer add new features or modify existing features without having to worry about irreparably breaking the codebase. This can benefit some development workflows (e.g. extreme or agile programming) which might otherwise be too risky to use in big projects.
+2. VC lets the programmer back up their work and then re-download it elsewhere, making it physically portable (though it may not run on every machine, at least not without a virtual environment like Codespaces or a remote desktop or something similar).
+### Team's Perspective
+1. A team can divide responsibilities in a codebase between the team-members and let them work concurrently on a group of files without constantly overwriting each other or trying to open files that are locked due to being currently open (depending on the text editor/IDE used -- even if git had never been invented, I don't think professional teams would use Vim...)
+2. Some git-based platforms (such as GitKraken, and maybe GitHub) provide graph displays/graphics that let teams easily track who's working on branch, where branches come from, etc. This makes it easier to organise teams and to work on different parts of the program as a large team, especially at the same time. It also makes it easier/possible to manage the 'logistics' of working on a program, as it reduces the chances that a development branch will accidentally be published, or that contributions will go to the wrong branch. It's also easier for programmers to tell what they're doing, where, and how far along development they are.
+
+# 1 Disadvantage
+(from my perspective)
+
+Git can be difficult to learn, which might intimidate new programmers into trying to avoid it or thinking it's too complicated for them to 'properly' learn. A GUI for git might lead to ignorance of the underlying systems, but even knowing the `git add` `git commit -m "[...]"` `git push` cycle might just lead to these three commands being used in a ritualistic way, just because they should be, rather than out of any actual understanding. Tutorials and courses don't make this any easier, as they either provide a bare minimum of information or hours and hours of content, which ultimately leads to uncertainty about what should be known now and what can be learned when it's needed (or even when someone is supposed to know whether something is needed or not...). 
