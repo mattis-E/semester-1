@@ -9,10 +9,10 @@ print(f"Welcome to LeedsBank's savings calculator, {name}!")
 
 # Ask the user to input an amount they want to save every month - this should be an integer.
 monthly_savings = 0 # set it to an integer
-monthly_savings = input("Enter your monthly savings amount: £")
+
 # Validate that they have entered an integer.
-try: # perhaps a bit janky, but isinstance didn't work, and this shows up early in thinkCSpy
-    monthly_savings = int(monthly_savings)
+try:
+    monthly_savings = int(input("Enter your monthly savings amount: £"))
 except:
     print("Invalid amount")
     quit()
