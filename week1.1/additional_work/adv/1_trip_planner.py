@@ -23,8 +23,3 @@ average_speed = (distance_miles_input / time_hours_input)
 print(f"Your average speed will be {average_speed} mph")
 
 # Extension: add validation for zero or negative values
-
-"""
-- histories & genealogies of languages
-- learn rust
-"""
