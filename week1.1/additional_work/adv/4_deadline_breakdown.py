@@ -10,6 +10,10 @@ minutes_remaining_input = input("Minutes remaining until the deadline: ")
 # TODO: convert the input to an integer
 minutes_remaining_input = int(minutes_remaining_input)
 
+if minutes_remaining_input <= 0:
+    print("Minutes should be greater than 1.")
+    quit()
+
 # TODO: calculate whole days, leftover hours, and remaining minutes
 # 1440 minutes in a day
 days_left = minutes_remaining_input // 1440
