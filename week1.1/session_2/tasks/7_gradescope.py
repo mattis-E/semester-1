@@ -11,7 +11,7 @@ try:
     num1 = int(num1)
     num2 = int(num2)
 except:
-    print("You didn't enter two integers!")
+    print("This is not a number")
     quit()
 
 # multiply those numbers together
