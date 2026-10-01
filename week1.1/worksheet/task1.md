@@ -10,7 +10,7 @@ You can complete this task on the worksheet pdf if you prefer.
 
 |     Command                 |     Explanation    |
 |-----------------------------|--------------------|
-|     pwd                     | shows the current location of the terminal |
+|     pwd                     | shows the current location of the user in the filesystem (prints the working directory) |
 |     ls                      | List/print the contents of the working directory |
 |     cd directory_name       | Change Directory (move to) the directory provided in the argument |
 |     cd ..                   | Move back/up one directory, if not at the root directory |
