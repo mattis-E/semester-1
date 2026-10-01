@@ -2,12 +2,12 @@
 
 # You are going to write a very simple program:
 
-# Ask a user to enter two numbers (one per input)
-num1 = input("Enter the first integer: ")
-num2 = input("Enter the second integer: ")
-
 # Validation
 try:
+    # Ask a user to enter two numbers (one per input)
+    num1 = input("Enter the first integer: ")
+    num2 = input("Enter the second integer: ")
+
     num1 = int(num1)
     num2 = int(num2)
 except:
