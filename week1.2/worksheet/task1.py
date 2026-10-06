@@ -9,9 +9,9 @@ except:
 if num < 0 or num > 100:
     sys.exit("Error: Grade must be an integer between 0 and 100")
 
-if 0 < num < 39:
+if 0 <= num <= 39:
     print(f"{num} is a Fail")
-elif 40 < num < 69:
+elif 40 <= num <= 69:
     print(f"{num} is a Pass")
-elif 70 < num < 100:
+elif 70 <= num <= 100:
     print(f"{num} is a Distinction")
