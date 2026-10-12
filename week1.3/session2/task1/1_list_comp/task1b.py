@@ -21,5 +21,5 @@ print(newval)
 
 # write the list comprehension equivalent to the `for` loop
 #sval = [cheating(i) for i in values]
-sval = [i for i in values]
+sval = [2 * i if i % 2 == 0 else i for i in values]
 print(sval)
