@@ -33,3 +33,4 @@
 4. We use `break` to exit the reading process at the end of the file.
 
 5. Why do we use an infinite `while True` loop for this process?
+So that every character in the file is printed.

@@ -24,6 +24,9 @@
 2. Run the program and inspect its output.
 
 3. Walk through the code step-by-step. What is the value of the `fruit` list on the 1st iteration, the 4th iteration, and right after the loop finishes?
+1st: orange
+4th: apple
+Right after end: empty list.
 
 4. Why doesn't this loop run forever(infinite loop)?
-
+pop() function removes the last element from the list. Eventually, the list runs out of elements.

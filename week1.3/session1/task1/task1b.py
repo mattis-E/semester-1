@@ -8,5 +8,9 @@ while fruit:
 
 
 # Why does this work?
+# pop() function removes the last element from the list. 
+# Eventually, the list runs out of elements.
+
 
 # What features of Python does it rely on?
+# While loop, list function.
