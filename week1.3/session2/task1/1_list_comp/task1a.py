@@ -4,7 +4,13 @@ animals = ['dog','cat','hamster','goldfish']
 
 not_fish = [item for item in animals if item != 'goldfish']
 
+not_fish_2 = []
+for a in animals:
+    if a != "goldfish":
+        not_fish_2.append(a)
+
 print(not_fish)
+print(not_fish_2)
 
 
 # write the equivalent for loop to create the not_fish list from animals
