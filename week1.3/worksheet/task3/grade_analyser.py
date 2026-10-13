@@ -14,6 +14,7 @@ lines = []
 for l in f:
     lines.append(l)
 f.close()
+del f
 
 lines.pop(0) # remove header line
 
@@ -28,7 +29,6 @@ for l in lines:
         if c == "," and start == 0:
             student_data.append(l[start:counter])       # student ID
             start = counter
-        # move next two elifs down to below elif c == "," and start != 0, if this doesn't work.
         elif len(l) - counter <= 2 and c != ",":        # last score, if applicable. number of digits if no comma at the end (c.f. below)
             student_data.append(l[start + 1:len(l) - 1])
             break
@@ -66,13 +66,29 @@ for i in student_data_aggregate:    # for all students
     mean = 0
     sum = 0
 
-print(all_students)
-
 # write out this calculated data in the format without a header:
 #      student_id,average_grade,classification - replace this with actual value
 #      The average grade should be given to 2 decimal places
 #      this can be achieved by using the following in an fstring: {variable_name:.2f}
 
+# Write to output.
+fn += "_out.csv"
+f = open(fn, "a")
+for d in all_students:
+    sc = ""
+    if d[1] >= 70:
+        sc = "1"
+    elif 60 <= d[1] <= 70:
+        sc = "2:1"
+    elif 50 <= d[1] <= 60:
+        sc = "2:2"
+    elif 40 <= d[1] <= 50:
+        sc = "3"
+    else:
+        sc = "F"
+
+    f.write(f"{d[0]},{d[1]:.2f},{sc}\n")
+f.close()
 
 # write this data out to a file named input_file_name + _out.csv - e.g. the input file name 'student_data.csv' -> 'student_data.csv_out.csv'
 
