@@ -17,7 +17,6 @@ f.close()
 
 lines.pop(0) # remove header line
 
-
 student_data_aggregate = [] # student_1, ..., student_n
 student_data = []           # ID, module_1, ... module_n
 student_counter = 0
@@ -29,12 +28,16 @@ for l in lines:
         if c == "," and start == 0:
             student_data.append(l[start:counter])       # student ID
             start = counter
+        # move next two elifs down to below elif c == "," and start != 0, if this doesn't work.
+        elif len(l) - counter <= 2 and c != ",":        # last score, if applicable. number of digits if no comma at the end (c.f. below)
+            student_data.append(l[start + 1:len(l) - 1])
+            break
+        elif len(l) - counter <= 3 and c != ",":        # last score, if applicable.
+            student_data.append(l[start + 1:len(l) - 2])
+            break
         elif c == "," and start != 0:
             student_data.append(l[start + 1:counter])   # all scores under the last one
             start = counter
-        elif len(l) - counter <= 3 and c != ",":        # last score, if applicable.
-            student_data.append(l[start + 1:len(l) - 1])
-            break
         counter += 1
     # now remove the commas
     student_data[:] = (n for n in student_data if n != ',' and n != '')
@@ -64,8 +67,6 @@ for i in student_data_aggregate:    # for all students
     sum = 0
 
 print(all_students)
-
-#print(student_data_aggregate)
 
 # write out this calculated data in the format without a header:
 #      student_id,average_grade,classification - replace this with actual value
