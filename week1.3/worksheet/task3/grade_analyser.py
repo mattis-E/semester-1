@@ -42,7 +42,30 @@ for l in lines:
     student_data_aggregate.append(student_data)
     student_data = []
 
-print(student_data_aggregate)
+# calculate average
+all_students = []
+student_stat = []
+student_counter = 0
+sum = 0
+for i in student_data_aggregate:    # for all students
+    for j in i:                     # for each student  
+        j = str(j)
+        if j.isnumeric():           # if it's a module score
+            j = int(j)
+            sum += j                # add it to the sum
+    student_stat.append(student_data_aggregate[student_counter][0])
+    mean = sum / (len(student_data_aggregate[student_counter]) - 1)
+    mean = round(mean, 2)
+    student_stat.append(mean)
+    all_students.append(student_stat)
+    student_stat = []
+    student_counter += 1
+    mean = 0
+    sum = 0
+
+print(all_students)
+
+#print(student_data_aggregate)
 
 # write out this calculated data in the format without a header:
 #      student_id,average_grade,classification - replace this with actual value
