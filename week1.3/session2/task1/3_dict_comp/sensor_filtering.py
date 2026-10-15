@@ -3,7 +3,8 @@
 home_sensors = {"Living Room Thermostat": 85, "Front Door Lock": 15, "Kitchen Smoke Detector": 90, "Basement Flood Sensor": 8}
 
 # dictionary comprehension to filter all sensors with battery level less than 20
+low_bat = {sensor: status for sensor, status in home_sensors.items() if status < 20}
 # Expected Output: {'Front Door Lock': 15, 'Basement Flood Sensor': 8}
 
-
 # print the new dictionary with battery less than 20 to verify
+print(low_bat)

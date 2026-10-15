@@ -4,6 +4,22 @@
 # You can use any of the .txt files to test this - or even make your own.
 
 # open and read the file
+inp = ""
+num_spaces = 0
+while True:
+    inp = input("filename: ")
+    if (inp == "quit"):
+        break
+    with open(inp, "r") as file:
+        for line in file:
+            if len(line) > 1:
+                num_spaces += line.count(" ") + line.count("\n")
+
+    #print(f"Length of {inp}: {str.count(" ") + str.count("\n")}")
+    print(num_spaces + 1)
+    num_spaces = 0
+
+
 
 # calculate the number of words
 # hint: you could use .split() to break up by spaces

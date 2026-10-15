@@ -1,11 +1,5 @@
 # Week 1.3, Session 1: Task 6b
 
-def cheating(n):
-    if n % 2 == 0:
-        return 2 * n
-    else:
-        return n
-
 values = [1,4,2,6,3,7]
 
 print(values)
@@ -20,6 +14,5 @@ for i in values:
 print(newval)
 
 # write the list comprehension equivalent to the `for` loop
-#sval = [cheating(i) for i in values]
 sval = [2 * i if i % 2 == 0 else i for i in values]
 print(sval)
