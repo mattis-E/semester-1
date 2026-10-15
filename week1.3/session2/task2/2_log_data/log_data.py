@@ -6,9 +6,17 @@
 
 
 # open and read the file
+lines = []
+data = []
+with open("site.log", "r") as file:
+    lines = file.readlines()
+    data = [l.strip().split(",") for l in lines]
 
 # find all failed login attempts (POST /login with the response 401)
+failed = [d for d in data if d[5] == "401" and d[4] == "POST /login"]
 # and print these out in a human-readable format:
+for f in failed:
+    print(f"IP address {f[2]} failed to login at {f[1]} on {f[0]}")
 # IP address 192.168.1.17 failed to login at 10:42:12 on 2024-10-20
 
 
