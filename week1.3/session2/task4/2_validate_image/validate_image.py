@@ -4,6 +4,50 @@
 # You could handle file errors with try/except
 
 # Read the file content
+fname = input("Filename: ")
+file = open("../images/" + fname)
+
+specified_width = 0
+specified_height = 0
+specified_max_value = 0
+valid = True
+counter = 0
+for line in file:
+    ln_list = line.strip().split(" ")
+    ln_list[:] = (val for val in ln_list if val != '')
+
+    # ignore first line
+    if counter == 0:
+        pass
+    # record specified width and height
+    elif counter == 1:
+        specified_width = int(ln_list[0])
+        specified_height = int(ln_list[1])
+    # record specified max value
+    elif counter == 2:
+        specified_max_value = int(ln_list[0])
+    else:
+        # check if width is exceeded
+        if len(ln_list) > specified_width:
+            valid = False
+            print("Invalid width")
+
+        for i in ln_list:
+            if i != '':
+                i = int(i)
+                if i > specified_max_value or i < 0:
+                    valid = False
+                    print("Invalid pixel values")
+        
+
+    counter += 1
+    
+if counter - 3 < specified_height:
+    valid = False
+    print("Invalid height")
+
+if valid == True:
+    print("Valid image")
 
 # Store the width, the height, and the maximum gray value
 
