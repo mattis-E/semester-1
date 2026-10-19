@@ -22,12 +22,16 @@ def valid_temperature(temperature):
 
 
 def celsius_to_fahrenheit(celsius):
-    fahrenheit = (celsius * 9/5) + 32
-    return fahrenheit
+    if valid_temperature(celsius):
+        fahrenheit = (celsius * 9/5) + 32
+        return fahrenheit
+    else:
+        print("The temperature is out of range.")
 
 
 # test the functions
 
 celsius = float(input("Enter temperature in Celsius: "))
+print(f"The temperature in Fahrenheit is: {celsius_to_fahrenheit(celsius)}")
 
 # Complete the rest of the code here
