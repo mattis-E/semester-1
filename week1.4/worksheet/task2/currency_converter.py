@@ -6,7 +6,7 @@
     other than any provided template code, was written and developed by
     you independently.
 
-    Name:
+    Name: Mattis Evans
 """
 
 def currency_converter(amount, from_currency, to_currency):
@@ -26,8 +26,7 @@ def currency_converter(amount, from_currency, to_currency):
     if amount <= 0:
         return 0.0
 
-    foo = amount * conversion_rate[from_currency][to_currency]
-    return round(foo, 2)
+    return round(amount * conversion_rate[from_currency][to_currency], 2)
 
 
 # Submit only this file currency_converter.py with the completed function.
