@@ -16,6 +16,17 @@ def most_frequent_string(votes):
         and int is the count of its occurences
         - None, None: if votes is empty.
     """
+    if len(votes) == 0:
+        return None, None
+    unique_votes = set(votes)
+    highest_vote = 0
+    highest_vote_value = ""
+    for x in unique_votes:
+        if votes.count(x) > highest_vote:
+            highest_vote = votes.count(x)
+            highest_vote_value = x
+
+    return highest_vote_value, highest_vote
 
     # Your task is to complete the body of the function based on the details in the docstring.
     # Hint 1: You can complete this task with for loops or comprehensions 
