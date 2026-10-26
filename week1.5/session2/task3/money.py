@@ -15,6 +15,10 @@ class Money:
         # - the pence parameter is an integer
         # - pence is not negative and not greater than 99
         # Raise appropriate exceptions if any of these are violated
+        if not isinstance(pounds, int) or not isinstance(pence, int):
+            raise TypeError("Pounds and pence must be integers.")
+        if pence > 99 or pence < 0:
+            raise AssertionError("Pence must be between the range of 0-99 inclusive.")
 
         self.pounds = pounds
         self.pence = pence
@@ -26,11 +30,30 @@ class Money:
         # Add code here to return an appropriate string representation
         # Use the currency symbol for British Pounds Sterling
         # Represent pence with a leading zero if needed (e.g. '05')
+        if self.pounds < 10:
+            if self.pence < 10:
+                return f"£0{self.pounds}.0{self.pence}"
+            else:
+                return f"£0{self.pounds}.{self.pence}"
+        else:
+            if self.pence < 10:
+                return f"£{self.pounds}.0{self.pence}"
+            else:
+                return f"£{self.pounds}.{self.pence}"
 
     def __add__(self, other):
         """
         Adds this Money to another Money, returning the total.
         """
+        if not isinstance(other, Money):
+            raise TypeError("Argument is not of type Money.")
+        pence = self.pence + other.pence
+        pounds = 0
+        if pence > 99:
+            pence -= 100
+            pounds += 1
+        pounds += self.pounds + other.pounds
+        return Money(pounds, pence)
         # Add code here to check that parameter 'other' is a Money object,
         # add self to other, then return the sum as a new Money object
         # (see README for hints and tips)
