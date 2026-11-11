@@ -7,6 +7,9 @@
 
 
 def format_data(day, month, year, separator='-'):
+    """
+    return the given date with custom separators/formatting (given by the seperator parameter).
+    """
     # complete your code here
     day =   str(day)
     month = str(month)

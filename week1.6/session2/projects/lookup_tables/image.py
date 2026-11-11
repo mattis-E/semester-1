@@ -153,6 +153,7 @@ class Image:
                 print(f"{value:4d}", end="", file=imgfile)
             print(file=imgfile)
 
+# create a lookup table with inverted pixel values. test with feep.pgm.
 lut = list(range(256))
 img = Image()
 img.read_pgm("../../images/feep.pgm")

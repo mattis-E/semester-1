@@ -65,4 +65,7 @@ class Circle:
 
     # Implement a __str__() method here
     def __str__(self):
+        """
+        returns a string version of the object.
+        """
         return f"Centre: {self.centre}; radius: {self.radius}"

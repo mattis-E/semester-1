@@ -9,6 +9,9 @@
 
 from process_data import process_data
 
+"""
+3 equivalence classes to test processing_data.py's functionality.
+"""
 
 def test_empty_list():
     # complete the implementation for

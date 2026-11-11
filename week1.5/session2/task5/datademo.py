@@ -7,6 +7,7 @@
 # followed by the individual values (using a for loop)
 import data
 
+# test Data functionality by printing the mean and median of the given dataset.
 db = data.Dataset("test.txt")
 print(db.mean())
 print(db.median())

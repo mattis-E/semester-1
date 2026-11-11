@@ -7,6 +7,9 @@
 from shapes import Shape, Circle
 from point import Point
 
+"""
+test the functionality of the circle class
+"""
 test = Circle(5, Point(5, 5), "blue")
 print(test)
 print(f"area: {test.area():.2f}, perimeter: {test.perimeter():.2f}")

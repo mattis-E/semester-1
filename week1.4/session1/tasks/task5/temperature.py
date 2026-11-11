@@ -15,6 +15,9 @@
 
 
 def valid_temperature(temperature):
+    """
+    returns True if the temperature is between -100 and 100, and false otherwise.
+    """
     if temperature >= -100 and temperature <= 100:
         return True
     else:
@@ -22,6 +25,9 @@ def valid_temperature(temperature):
 
 
 def celsius_to_fahrenheit(celsius):
+    """
+    converts a celsius input temperature to fahrenheight and returns it (and validates the input).
+    """
     if valid_temperature(celsius):
         fahrenheit = (celsius * 9/5) + 32
         return fahrenheit
@@ -33,5 +39,3 @@ def celsius_to_fahrenheit(celsius):
 
 celsius = float(input("Enter temperature in Celsius: "))
 print(f"The temperature in Fahrenheit is: {celsius_to_fahrenheit(celsius)}")
-
-# Complete the rest of the code here

@@ -1,9 +1,11 @@
 
 # function implementation
 
+# Return the area of the given rectangle (constructed from discrete width and height parameters)
 def rectangle_area(width, height):  # define suitable input data
     return width * height
 
+# return a list of even integers between 0 and the max parameter.
 def get_even_sequence(max):
     lst = []
     for i in range (0, max):

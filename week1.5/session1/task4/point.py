@@ -13,11 +13,17 @@ class Point:
 
     # Add distance() method here
     def distance(self):
+        """
+        returns the distance between the origin and the point.
+        """
         return round(math.sqrt(self.x**2 + self.y**2), 2)
 
     # Add distance_to() method here
     # (This will need a parameter representing another point)
     def distance_to(self, x, y):
+        """
+        returns the distance between two points.
+        """
         return round(math.sqrt((x-self.x)**2 + (y-self.y)**2), 2)
 
 

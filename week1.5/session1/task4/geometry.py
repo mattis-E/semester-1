@@ -16,13 +16,22 @@ import point
 #  - A method perimeter(), returning the perimeter of the circle
 class Circle:
     def __init__(self, centre: point, radius):
+        """
+        constructor, taking in the centre and radius.
+        """
         self.centre = centre
         self.radius = radius
 
     def area(self):
+        """
+        returns the area of the circle, rounded to 2 d.p.
+        """
         return round((math.pi * self.radius**2), 2)
 
     def perimeter(self):
+        """
+        returns the perimeter of the circle, rounded to 2 d.p.
+        """
         return round(math.pi * self.radius * 2, 2)
 
 # Don't add any testing code to this file!

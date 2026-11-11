@@ -5,6 +5,9 @@
 
 
 def power(x, n):
+    """
+    find x^n using a recursive implementation.
+    """
     # complete your code here
     # base case
     if n < 0:

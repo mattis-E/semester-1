@@ -9,6 +9,9 @@
 import math
 
 def midpoint(p1,p2):
+    """
+    return the midpoint of two points (which are the arguments).
+    """
     # complete your code here to return a point tuple
     midpoint_x = (p1[0] + p2[0]) / 2
     midpoint_y = (p1[1] + p2[1]) / 2
@@ -16,6 +19,9 @@ def midpoint(p1,p2):
     return mid_point
 
 def length(p1,p2):
+    """
+    return the length of the line between two points (which are the arguments).
+    """
     # complete your code here to return a value
     distance = math.sqrt((p2[0] - p1[0])**2 + (p2[1] - p1[1])**2)
     return distance

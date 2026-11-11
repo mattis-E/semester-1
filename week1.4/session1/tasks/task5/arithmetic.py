@@ -4,7 +4,6 @@
 # and one for getting user inputs. Please inspect the code and then
 # complete the code for case 1 to case 4.
 
-
 def addition(num1, num2):
     return num1 + num2
 
@@ -38,6 +37,7 @@ def run_program():
     print("4. Division (/)")
     operation = int(input("Enter your choice (1-4): "))
 
+    # Get input from the user and match the operation to the input.
     match operation:
         case 1:
             result = addition(num1, num2)    # complete this line of code

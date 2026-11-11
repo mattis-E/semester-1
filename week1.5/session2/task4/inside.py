@@ -4,6 +4,10 @@
 # method that you implemented in the Circle class
 import geometry
 
+"""
+test the functionality of the 'in' operator on the Point class.
+"""
+
 c = geometry.Circle(5, geometry.Point(0, 0))
 pY1 = geometry.Point(2, 2)
 pY2 = geometry.Point(-2, -2)

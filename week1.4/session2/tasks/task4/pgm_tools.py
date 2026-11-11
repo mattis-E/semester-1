@@ -70,6 +70,7 @@ def invertPGM( image ):
 # code to test the PGM functions
 image = readPGM("images/feep.pgm")
 
+# print image data
 print(f"Image with width {image[0]} and height {image[1]}")
 print(f"{image[3]}")
 

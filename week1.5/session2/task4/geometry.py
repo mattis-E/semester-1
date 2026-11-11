@@ -74,6 +74,9 @@ class Circle:
 
     # Implement your __contains__() method here
     def __contains__(self, other: Point):
+        """
+        return True if the point argument is 'in' the circle (self), and false otherwise.
+        """
         if ((other.x - self.centre.x)**2 + (other.y - self.centre.y)**2) < self.radius**2:
             return True
         return False

@@ -7,6 +7,10 @@
 
 from weather import comfort_level
 
+"""
+Sets up tests for pytest to run on. 
+"""
+
 def test_cold():
     assert comfort_level(  12  ) == "COLD"
     assert comfort_level(  15  ) == "COLD"
