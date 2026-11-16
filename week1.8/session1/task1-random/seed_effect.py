@@ -2,10 +2,14 @@
 
 import random
 
-random.seed(10)
+#random.seed(10)
 
 num1 = random.randint(1, 100)
 num2 = random.randint(1, 100)
 num3 = random.randint(1, 100)
 
 print(num1, num2, num3)
+
+# 3 pseudorandom numbers are generated and printed. 
+# if a seed is hardcoded, the same numbers will appear over and over again.
+# otherwise, another seed will be automatically used, e.g. system time.
