@@ -8,4 +8,7 @@ url = "https://httpbin.io/json"
 
 response = httpx.get(url)   # httpx object, get() method, returns a response object
 
-print(response.json())      # response object, json() method
+if (str(response).find("404") > -1):
+    print("Error: Failed to GET " + url + ".")
+else:
+    print(response.json())      # response object, json() method
